@@ -1,0 +1,9 @@
+git clone --depth=1 https://github.com/raspberrypi/linux
+mv linux 3.18.9+
+apt-get update
+apt-get upgrade
+apt-get dist-upgrade
+apt-get install linux-headers-3.18.9+
+dpkg -i linux-headers-3.18.9+_3.18.9+-2_armhf.deb
+cp -r linux-headers-3.18.9+ /usr/src/3.18.9+/linux-headers
+ln -s /usr/src/3.18.9+/linux-headers /lib/modules/3.18.9+/build
